@@ -32,5 +32,21 @@ public class Main {
         System.out.println(movies.get(2));
         System.out.println();
         System.out.println(movies.get(4998));
+        System.out.println();
+
+        double aveRun = 0;
+        for (int i = 0; i < movies.size(); i++) {
+            aveRun += movies.get(i).getRuntime();
+        }
+        aveRun /= movies.size();
+
+        double aveRate = 0;
+        for (int i = 0; i < movies.size(); i++) {
+            aveRate += movies.get(i).getUserRating();
+        }
+        aveRate /= movies.size();
+
+        System.out.println(aveRun);
+        System.out.println(aveRate);
     }
 }
